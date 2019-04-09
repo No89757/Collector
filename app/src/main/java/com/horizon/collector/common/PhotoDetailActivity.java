@@ -23,7 +23,7 @@ import com.horizon.doodle.Doodle;
 import com.horizon.doodle.MHash;
 import com.horizon.doodle.MemoryCacheStrategy;
 import com.horizon.event.EventManager;
-import com.horizon.task.IOTask;
+import com.horizon.task.UITask;
 import com.horizon.task.base.Priority;
 
 import java.io.File;
@@ -86,7 +86,7 @@ public class PhotoDetailActivity extends ToolbarActivity {
         }
     }
 
-    private class DownloadTask extends IOTask<Void, Void, Boolean> {
+    private class DownloadTask extends UITask<Void, Void, Boolean> {
         @Override
         protected Boolean doInBackground(Void... voids) {
             File file = Doodle.downloadOnly(mUrl);

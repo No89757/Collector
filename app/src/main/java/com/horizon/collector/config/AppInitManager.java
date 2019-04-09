@@ -36,6 +36,7 @@ class AppInitManager {
 
             Doodle.init(context)
                     .setUserAgent(HttpClient.USER_AGENT)
+                    .setMemoryCacheCapacity(Runtime.getRuntime().maxMemory()/4)
                     .setGifDecoder(new GifDecoder() {
                         @NotNull
                         @Override

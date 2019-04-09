@@ -16,7 +16,7 @@ import com.horizon.collector.common.ChannelFragment;
 import com.horizon.collector.common.channel.Channel;
 import com.horizon.collector.unsplash.suorce.UPhoto;
 import com.horizon.collector.unsplash.suorce.UnsplashCatcher;
-import com.horizon.task.IOTask;
+import com.horizon.task.UITask;
 import com.horizon.task.base.Priority;
 
 import java.util.ArrayList;
@@ -87,7 +87,7 @@ public class UnsplashChannelFragment extends ChannelFragment {
         }
     }
 
-    private class FetchUPhotoTask extends IOTask<Void, Void, List<UPhoto>> {
+    private class FetchUPhotoTask extends UITask<Void, Void, List<UPhoto>> {
         private boolean hasData = true;
 
         protected List<UPhoto> doInBackground(Void... params) {

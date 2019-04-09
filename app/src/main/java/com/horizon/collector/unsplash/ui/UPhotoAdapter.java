@@ -54,7 +54,6 @@ public class UPhotoAdapter extends BaseAdapter<UPhoto, UPhotoAdapter.UPhotoHolde
 
         Doodle.load(url)
                 .host(getHost())
-                .config(Bitmap.Config.RGB_565)
                 .override(desWidth, desHeight)
                 .placeholder(0)
                 .diskCacheStrategy(DiskCacheStrategy.SOURCE)

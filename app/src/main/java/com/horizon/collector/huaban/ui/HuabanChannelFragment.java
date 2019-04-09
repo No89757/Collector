@@ -16,7 +16,7 @@ import com.horizon.collector.common.ChannelFragment;
 import com.horizon.collector.common.channel.Channel;
 import com.horizon.collector.huaban.source.HuabanCatcher;
 import com.horizon.collector.huaban.source.Pin;
-import com.horizon.task.IOTask;
+import com.horizon.task.UITask;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -86,7 +86,7 @@ public class HuabanChannelFragment extends ChannelFragment {
     }
 
 
-    private class FetchPinsTask extends IOTask<Void, Void, List<Pin>> {
+    private class FetchPinsTask extends UITask<Void, Void, List<Pin>> {
         private String pinID = "";
         private boolean hasData = true;
 

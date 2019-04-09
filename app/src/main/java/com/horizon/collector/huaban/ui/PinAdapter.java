@@ -51,7 +51,6 @@ public class PinAdapter extends BaseAdapter<Pin, PinAdapter.PinHolder> {
 
         Doodle.load(item.url)
                 .host(getHost())
-                .config(Bitmap.Config.RGB_565)
                 .override(desWidth, desHeight)
                 .into(holder.flowIv);
     }

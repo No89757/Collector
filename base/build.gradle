@@ -5,7 +5,7 @@ apply plugin: 'kotlin-android'
 android {
     publishNonDefault true
 
-    compileSdkVersion rootProject.ext.compileSdkVersion
+    compileSdkVersion 28
 
     defaultConfig {
         minSdkVersion rootProject.ext.minSdkVersion
@@ -29,13 +29,12 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-    api "com.android.support:design:$rootProject.supportLibraryVersion"
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     api "com.android.support:appcompat-v7:$rootProject.supportLibraryVersion"
+    api "com.android.support:design:$rootProject.supportLibraryVersion"
     api "com.android.support:cardview-v7:$rootProject.supportLibraryVersion"
-    implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.2.60'
-
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.21'
     api 'com.horizon.event:event:1.0.1'
     api 'com.horizon.lightkv:lightkv:1.0.7'
-    api 'com.horizon.doodle:doodle:1.0.8'
+    api 'com.horizon.doodle:doodle:1.0.9'
 }
