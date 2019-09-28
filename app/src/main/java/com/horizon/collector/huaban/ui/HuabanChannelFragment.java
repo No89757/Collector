@@ -2,9 +2,9 @@
 package com.horizon.collector.huaban.ui;
 
 
-import android.support.v4.widget.SwipeRefreshLayout;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.StaggeredGridLayoutManager;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 import com.horizon.base.network.NetworkUtil;
 import com.horizon.base.ui.BaseAdapter;
@@ -125,6 +125,10 @@ public class HuabanChannelFragment extends ChannelFragment {
 
         @Override
         protected void onPostExecute(List<Pin> pinList) {
+            if(pinList == null){
+                ToastUtil.showTips("获取图片列表失败");
+                mSwipeRefreshLayout.setRefreshing(false);
+            }
             if (mLoadingMode == MODE_LOAD_MORE) {
                 if (pinList == null) {
                     // 返回null说明获取列表时发生异常

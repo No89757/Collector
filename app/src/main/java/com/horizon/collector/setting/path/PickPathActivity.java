@@ -1,10 +1,9 @@
 package com.horizon.collector.setting.path;
 
 
-import android.os.Bundle;
 import android.os.Environment;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -15,7 +14,6 @@ import com.horizon.base.event.Event;
 import com.horizon.base.ui.ToolbarActivity;
 import com.horizon.base.util.ToastUtil;
 import com.horizon.collector.R;
-import com.horizon.collector.common.ExtraKey;
 import com.horizon.collector.setting.model.UserSetting;
 import com.horizon.event.EventManager;
 

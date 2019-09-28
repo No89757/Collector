@@ -4,16 +4,12 @@ package com.horizon.base.ui;
 
 import android.app.Activity;
 import android.app.Dialog;
-import android.support.annotation.NonNull;
-import android.support.annotation.StyleRes;
+import androidx.annotation.NonNull;
+import androidx.annotation.StyleRes;
 
-import com.horizon.doodle.Doodle;
 import com.horizon.task.lifecycle.LifeEvent;
 import com.horizon.task.lifecycle.LifecycleManager;
 import com.horizon.task.lifecycle.LifeListener;
-
-import java.util.Observable;
-import java.util.Observer;
 
 
 /**

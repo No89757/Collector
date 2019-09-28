@@ -10,7 +10,7 @@ android {
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
 
@@ -30,13 +30,13 @@ android {
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
-    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
-    implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.21'
-    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.8'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.3.31'
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.17'
     implementation('com.github.chrisbanes:PhotoView:2.1.4') {
         exclude group: 'com.android.support'
     }
     implementation 'com.squareup.okhttp3:okhttp:3.12.0'
-    implementation 'pub.devrel:easypermissions:2.0.0'
+    implementation 'pub.devrel:easypermissions:2.0.1'
     api project(':base')
 }

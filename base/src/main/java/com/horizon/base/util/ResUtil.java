@@ -1,7 +1,7 @@
 
 package com.horizon.base.util;
 
-import android.support.annotation.StringRes;
+import androidx.annotation.StringRes;
 
 import com.horizon.base.config.GlobalConfig;
 

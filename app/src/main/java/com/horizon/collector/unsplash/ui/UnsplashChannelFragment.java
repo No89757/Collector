@@ -2,9 +2,9 @@
 package com.horizon.collector.unsplash.ui;
 
 
-import android.support.v4.widget.SwipeRefreshLayout;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.StaggeredGridLayoutManager;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
 import com.horizon.base.network.NetworkUtil;
 import com.horizon.base.ui.BaseAdapter;

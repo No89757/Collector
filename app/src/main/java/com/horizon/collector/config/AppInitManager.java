@@ -22,8 +22,7 @@ import java.util.List;
 import pl.droidsonroids.gif.GifDrawable;
 
 class AppInitManager {
-
-    public static void initApplication(Application context) {
+    static void initApplication(Application context) {
         if (AppConfig.APPLICATION_ID.equals(getProcessName(context))) {
             // 先初始化AppContext
             GlobalConfig.setAppContext(context);
@@ -34,9 +33,8 @@ class AppInitManager {
 
             LogProxy.INSTANCE.init(GlobalLogger.getInstance());
 
-            Doodle.init(context)
+            Doodle.config()
                     .setUserAgent(HttpClient.USER_AGENT)
-                    .setMemoryCacheCapacity(Runtime.getRuntime().maxMemory()/4)
                     .setGifDecoder(new GifDecoder() {
                         @NotNull
                         @Override

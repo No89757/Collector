@@ -1,7 +1,7 @@
 package com.horizon.collector.setting.path;
 
 import android.os.Bundle;
-import android.support.annotation.NonNull;
+import androidx.annotation.NonNull;
 
 import com.horizon.base.ui.BaseActivity;
 import com.horizon.base.ui.BaseDialog;

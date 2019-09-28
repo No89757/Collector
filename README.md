@@ -11,5 +11,7 @@ Collector是一个简单的图片浏览，收藏，下载APP，整体功能简�
 感谢[花瓣网](https://huaban.com/)和[unsplash](https://unsplash.com/)两个图片平台，让大家可以方便地分享和检索图片素材。<br/>
 此项目为演示和学习的用途，若存在版权问题请联系删除。
 
+（最近花瓣网网站维护，获取不到图片）
+
 # License
 See the [LICENSE](LICENSE.md) file for license rights and limitations.

@@ -2,15 +2,14 @@
 
 package com.horizon.collector.common;
 
-import android.os.Bundle;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
 
 import com.github.chrisbanes.photoview.PhotoView;
 import com.horizon.base.event.Event;
-import com.horizon.base.ui.BaseActivity;
 import com.horizon.base.ui.ToolbarActivity;
 import com.horizon.base.util.FileUtil;
 import com.horizon.base.util.LogUtil;
@@ -43,14 +42,14 @@ public class PhotoDetailActivity extends ToolbarActivity {
         hideTitle();
         String url = getIntent().getStringExtra(ExtraKey.DETAIL_URL);
         mUrl = url;
-        // TODO 当图片分辨率宽或高大于4096时ImageView显示不出来
         PhotoView photoView = findViewById(R.id.photo_view);
         Doodle.load(url)
                 .priority(Priority.IMMEDIATE)
                 .host(this)
+                .override(4096, 4096)
+                .scaleType(ImageView.ScaleType.CENTER_INSIDE)
                 .memoryCacheStrategy(MemoryCacheStrategy.WEAK)
                 .diskCacheStrategy(DiskCacheStrategy.SOURCE)
-                .noClip()
                 .into(photoView);
     }
 

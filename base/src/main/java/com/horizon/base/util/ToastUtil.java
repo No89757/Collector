@@ -3,7 +3,7 @@
 package com.horizon.base.util;
 
 
-import android.support.annotation.StringRes;
+import androidx.annotation.StringRes;
 import android.widget.Toast;
 
 import com.horizon.base.config.GlobalConfig;
