@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class HuabanCatcher {
+public class HuabanCaptcher {
     private static final String BASE_URL = "https://huaban.com/favorite/";
 
     public static List<Pin> pickPins(String id, String pinID) throws IOException {

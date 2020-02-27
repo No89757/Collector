@@ -14,7 +14,7 @@ import com.horizon.base.util.ToastUtil;
 import com.horizon.collector.R;
 import com.horizon.collector.common.ChannelFragment;
 import com.horizon.collector.common.channel.Channel;
-import com.horizon.collector.huaban.source.HuabanCatcher;
+import com.horizon.collector.huaban.source.HuabanCaptcher;
 import com.horizon.collector.huaban.source.Pin;
 import com.horizon.task.UITask;
 
@@ -103,7 +103,7 @@ public class HuabanChannelFragment extends ChannelFragment {
         @Override
         protected List<Pin> doInBackground(Void... params) {
             try {
-                List<Pin> pinList = HuabanCatcher.pickPins(mChannel.id, pinID);
+                List<Pin> pinList = HuabanCaptcher.pickPins(mChannel.id, pinID);
                 hasData = !CollectionUtil.isEmpty(pinList);
                 // 过滤重复的图片
                 Iterator<Pin> iterator = pinList.iterator();
